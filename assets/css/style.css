@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.wrapper-menu {
+    background: blanchedalmond;  
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 20%;
+    justify-content: flex-start;
+    padding: 0;
+}
+
+.title-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+}
+
+.material-symbols-outlined {
+    font-size: 24px;
+    vertical-align: middle;
+    color: red;
+}
+
+
+.grid-item {
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+.item-menu {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-menu {
+    background-color: #003366;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    margin-top: auto;
+}
+
+.wrapper-products {
+    background-color: cadetblue;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    
+}
+
+
+.wrapper-filter{
+    background-color: gainsboro;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper-filter p{
+    display: flex;
+    justify-content: center;
+}
+.filter-item{
+    display: flex;
+    justify-content: center;
+}
+
+#order-by {
+    width: 750px;
+    padding: 5px;
+    font-size: 10px;
+
+}
+
+.products-item {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.product-card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    flex-grow: 1;
+}
+
+.product-card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.product-card button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background-color: #555;
+}
+
+.pagination ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.pagination a {
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+}
+
+.pagination a:hover {
+    background-color: #ddd;
+}
+
+.pagination a.active {
+    background-color: #333;
+    color: white;
+    border: 1px solid #333;
+}
+
+
+/* Media query para pantallas mayores a 768px (Versión escritorio) */
+@media (min-width: 768px) {
+    .main {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .wrapper-menu {
+        width: 20%;
+    }
+
+    .wrapper-products {
+        width: 80%;
+    }
+
+    .products-item {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        justify-items: center;
+    }
+
+    .product-card {
+        width: 100%;
+    }
+
+    .products-item-mobile{
+        display: none;
+    }
+
+    .footer-menu-mobile{
+        display: none;
+    }
+
+    .button-menu{
+        display: none;
+    }
+}
+
+
+
+@media (max-width: 576px) {
+    /* Ajuste del menú para dispositivos móviles */
+
+    .main{
+        display: flex;
+        flex-direction: column;        
+    }
+
+    .item-menu{
+        display: none;
+    }
+
+    .footer-menu{
+        display: none;
+    }
+
+    .products-item{
+        display: none;
+    }
+
+    .wrapper-products{
+        height: 80vh;
+    }
+
+    .header h1 {
+        font-size: 24px;
+        margin-left: 10px;
+    }
+
+    .header img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .wrapper-menu {
+        width: 100%;
+    }
+
+    .wrapper-products{
+        width: 100%;
+    }
+
+    .wrapper-filter {
+        background-color: gainsboro;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .wrapper-filter select {
+        width: 90%;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .product-card {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 40px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 20px auto;
+        width: 90%;
+        height: 320px;
+    }
+
+    .product-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        object-fit: contain;
+    }
+
+    .product-card h3 {
+        font-size: 15px;
+        margin: 10px 0;
+    }
+
+    .product-card p {
+        font-size: 12px;
+        color: #555;
+    }
+
+    .product-card button {
+        padding: 10px 20px;
+        border: none;
+        background-color: #004680;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .product-card button:hover {
+        background-color: #003366;
+    }
+
+    .pagination ul {
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        padding: 0;
+        margin: 20px 0;
+    }
+
+    .pagination li {
+        margin: 0 5px;
+    }
+
+    .pagination a {
+        color: black;
+        padding: 10px 15px;
+        text-decoration: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: white;
+    }
+
+    .pagination a:hover {
+        background-color: #ddd;
+    }
+
+    .pagination a.active {
+        background-color: #004680;
+        color: white;
+        border: 1px solid #004680;
+    }
+
+
+    .footer-menu-mobile{
+        background-color: #003366;
+        display: flex;
+        justify-items: center;
+        justify-content: center;
+        width: 65,5vh;
+        height: 13vh;
+        color: white;
+        flex-direction: column;
+    }
+
+    .footer-menu-mobile p{
+        display: flex;
+        justify-content: center;
+    }
+
+    .img-foote-menu{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        gap: 15px;
+        padding: 10px;
+    }
+
+}
